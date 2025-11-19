@@ -1,0 +1,150 @@
+/* styles.css — centered, modern hospital design */
+
+:root {
+  --accent: #1e90ff;
+  --muted: #6b7280;
+  --bg: #f6fbff;
+}
+
+/* center everything */
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  background:var(--bg);
+}
+body {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-family:Inter, Arial, sans-serif;
+}
+
+header {
+  width:100%;
+  max-width:1200px;
+  padding:22px 30px;
+  background:#1e90ff;
+  color:white;
+  border-bottom:4px solid #1874d1;
+}
+header h1 { margin:0; font-size:24px; }
+.team { margin-top:4px; font-size:13px; opacity:.95; }
+
+/* Tabs */
+.tabs {
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  padding:10px 20px;
+  gap:10px;
+  background:white;
+  border-bottom:1px solid #dce5f5;
+}
+.tab-btn {
+  padding:10px 16px;
+  border:0;
+  background:transparent;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+  color:#0f172a;
+}
+.tab-btn.active {
+  background:#eaf3ff;
+  color:#0a3b86;
+}
+
+/* Main */
+main {
+  width:100%;
+  max-width:1200px;
+  padding:20px;
+}
+
+.tab { display:none; }
+.tab.active { display:block; }
+
+/* Cards */
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.card {
+  flex:1 1 230px;
+  background:white;
+  border-radius:10px;
+  border:1px solid #e3e7ef;
+  padding:18px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+.stat { font-size:28px; color:var(--accent); }
+
+/* Forms */
+.form-row, .search-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:12px;
+}
+input {
+  padding:8px 10px;
+  border-radius:6px;
+  border:1px solid #d1d5db;
+}
+button {
+  padding:9px 14px;
+  border-radius:6px;
+  font-weight:600;
+  border:0;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+}
+
+/* Table */
+table {
+  width:100%;
+  background:white;
+  border-collapse:collapse;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+thead {
+  background:#eaf3ff;
+  color:#0f2957;
+}
+th,td {
+  padding:10px 14px;
+  border-top:1px solid #eef2f7;
+}
+
+.actions button {
+  margin-right:6px;
+  padding:6px 10px;
+}
+
+.del { background:#ef4444; }
+.cancel { background:#f59e0b; }
+.done-btn { background:#16a34a; }
+
+/* STATUS COLORS */
+.status-scheduled { color:#0ea5e9; font-weight:700; }
+.status-done { color:#16a34a; font-weight:700; }
+.status-cancelled { color:#f97316; font-weight:700; }
+
+/* row background */
+.row-done { background:#ecfdf5; }
+.row-cancelled { background:#fff7ed; }
+
+/* Footer */
+footer {
+  width:100%;
+  max-width:1200px;
+  text-align:center;
+  padding:14px;
+  font-size:13px;
+  color:var(--muted);
+}

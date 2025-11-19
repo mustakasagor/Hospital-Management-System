@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hospital Management System</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Hospital Management System</h1>
+  <p class="team">Developed by: Mustak-1/24/SET/BCS/080</p>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+  <button class="tab-btn" data-tab="patients">Patients</button>
+  <button class="tab-btn" data-tab="doctors">Doctors</button>
+  <button class="tab-btn" data-tab="appointments">Appointments</button>
+</nav>
+
+<main>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="tab active">
+    <div class="cards">
+      <div class="card">
+        <h3>Total Patients</h3>
+        <div id="stat_patients" class="stat">0</div>
+      </div>
+      <div class="card">
+        <h3>Total Doctors</h3>
+        <div id="stat_doctors" class="stat">0</div>
+      </div>
+      <div class="card">
+        <h3>Total Appointments</h3>
+        <div id="stat_appointments" class="stat">0</div>
+      </div>
+      <div class="card">
+        <h3>Scheduled</h3>
+        <div id="stat_scheduled" class="stat">0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATIENTS -->
+  <section id="patients" class="tab">
+
+    <div class="form-row">
+      <input id="p_name" placeholder="Name" />
+      <input id="p_age" type="number" placeholder="Age" />
+      <input id="p_gender" placeholder="Gender" />
+      <input id="p_address" placeholder="Address" />
+      <input id="p_phone" placeholder="Phone" />
+      <button id="p_add">Add Patient</button>
+    </div>
+
+    <div class="search-row">
+      <input id="p_search" placeholder="Search by name or ID" />
+      <button id="p_search_btn">Search</button>
+      <button id="p_clear_search">Clear</button>
+    </div>
+
+    <table id="patients_table">
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Address</th><th>Phone</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- DOCTORS -->
+  <section id="doctors" class="tab">
+
+    <div class="form-row">
+      <input id="d_name" placeholder="Name" />
+      <input id="d_age" type="number" placeholder="Age" />
+      <input id="d_gender" placeholder="Gender" />
+      <input id="d_spec" placeholder="Specialization" />
+      <button id="d_add">Add Doctor</button>
+    </div>
+
+    <div class="search-row">
+      <input id="d_search" placeholder="Search name/id/specialization" />
+      <button id="d_search_btn">Search</button>
+      <button id="d_clear_search">Clear</button>
+    </div>
+
+    <table id="doctors_table">
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Specialization</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+  </section>
+
+  <!-- APPOINTMENTS -->
+  <section id="appointments" class="tab">
+
+    <div class="form-row">
+      <input id="a_patient_id" type="number" placeholder="Patient ID" />
+      <input id="a_doctor_id" type="number" placeholder="Doctor ID" />
+      <input id="a_datetime" placeholder="YYYY-MM-DD HH:MM" />
+      <input id="a_reason" placeholder="Reason" />
+      <button id="a_create">Create Appointment</button>
+    </div>
+
+    <table id="appointments_table">
+      <thead>
+        <tr>
+          <th>ID</th><th>Patient</th><th>Doctor</th><th>DateTime</th><th>Reason</th><th>Status</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+  </section>
+
+</main>
+
+<footer>
+  <small>© Team Project — Computer Science Department</small>
+</footer>
+
+<script src="hms.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
